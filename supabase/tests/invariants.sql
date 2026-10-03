@@ -80,10 +80,16 @@ begin
     raise exception 'doctor_schedule.valid_time_range check missing';
   end if;
 
+  -- PostgreSQL deparses `between 0 and 6` as `>= 0 AND <= 6`, so match
+  -- both renderings (the literal form never appears in pg_get_constraintdef).
   if not exists (
     select 1 from pg_constraint
     where conrelid = 'public.doctor_schedule'::regclass
-      and pg_get_constraintdef(oid) like '%day_of_week between 0 and 6%'
+      and contype = 'c'
+      and (
+        pg_get_constraintdef(oid) like '%day_of_week between 0 and 6%'
+        or pg_get_constraintdef(oid) like '%day_of_week >= 0%6%'
+      )
   ) then
     raise exception 'doctor_schedule day_of_week range check missing';
   end if;
