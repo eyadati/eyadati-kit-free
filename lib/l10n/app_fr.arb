@@ -1,0 +1,341 @@
+{
+  "@@locale": "fr",
+  "appName": "Eyadati",
+  "commonLoading": "Chargement...",
+  "commonError": "Erreur",
+  "commonRetry": "Réessayer",
+  "commonSave": "Enregistrer",
+  "commonCancel": "Annuler",
+  "commonConfirm": "Confirmer",
+  "commonDelete": "Supprimer",
+  "commonEdit": "Modifier",
+  "commonClose": "Fermer",
+  "commonSearch": "Rechercher",
+  "commonNoResults": "Aucun résultat",
+  "commonTryAgain": "Réessayer",
+  "commonContinue": "Continuer",
+  "commonBack": "Retour",
+  "commonNext": "Suivant",
+  "commonDone": "Terminé",
+  "commonYes": "Oui",
+  "commonNo": "Non",
+  "commonOk": "OK",
+  "commonMore": "autres",
+
+  "validationEmailRequired": "Email requis",
+  "validationEmailInvalid": "Email invalide",
+  "validationPasswordRequired": "Mot de passe requis",
+  "validationPasswordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+  "validationNameRequired": "Nom requis",
+  "validationPhoneRequired": "Téléphone requis",
+  "validationConfirmPasswordRequired": "Confirmer le mot de passe requis",
+  "validationPasswordsDoNotMatch": "Les mots de passe ne correspondent pas",
+
+  "authLoginTitle": "Bienvenue",
+  "authLoginSubtitle": "Connectez-vous à votre compte",
+  "authEmailLabel": "Email",
+  "authPasswordLabel": "Mot de passe",
+  "authLoginButton": "Se connecter",
+  "authForgotPassword": "Mot de passe oublié ?",
+  "authNoAccount": "Vous n'avez pas de compte ? ",
+  "authSignUp": "S'inscrire",
+
+  "authRegisterTitle": "Créer un compte",
+  "authRegisterSubtitle": "Rejoignez Eyadati",
+  "authNameLabel": "Nom complet",
+  "authPhoneLabel": "Téléphone",
+  "authConfirmPasswordLabel": "Confirmer le mot de passe",
+  "authRegisterButton": "S'inscrire",
+  "authHaveAccount": "Vous avez déjà un compte ? ",
+  "authLogIn": "Se connecter",
+
+  "authForgotPasswordTitle": "Mot de passe oublié",
+  "authForgotPasswordSubtitle": "Entrez votre email pour réinitialiser",
+  "authResetPasswordButton": "Réinitialiser",
+  "authBackToLogin": "Retour à la connexion",
+
+  "roleSelectTitle": "Qui êtes-vous ?",
+  "roleSelectSubtitle": "Choisissez votre rôle",
+  "rolePatient": "Patient",
+  "rolePatientDesc": "Prenez des rendez-vous avec des médecins",
+  "roleDoctor": "Docteur",
+  "roleDoctorDesc": "Gérez votre calendrier et vos patients",
+
+  "navHome": "Accueil",
+  "navAppointments": "Rendez-vous",
+  "navDoctors": "Docteurs",
+  "navFavorites": "Favoris",
+  "navProfile": "Profil",
+  "navSettings": "Paramètres",
+
+  "patientHomeTitle": "Bonjour, {name}",
+  "@patientHomeTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "patientHomeSubtitle": "Comment allez-vous aujourd'hui ?",
+  "patientUpcomingAppointments": "Rendez-vous à venir",
+  "patientFindDoctor": "Trouver un médecin",
+  "patientViewAll": "Voir tout",
+  "patientNoAppointments": "Aucun rendez-vous à venir",
+  "patientBookNow": "Réserver maintenant",
+  "patientHomeNoAppointmentMsg": "Appuyez sur le bouton ci-dessous pour trouver un médecin",
+
+  "doctorsBrowseTitle": "Tous les médecins",
+  "doctorsSearchPlaceholder": "Rechercher un médecin...",
+
+
+  "doctorsFilterSpecialty": "Spécialité",
+  "doctorsFilterAvailability": "Disponibilité",
+  "searchFilterRequired": "Veuillez sélectionner une ville ou une spécialité",
+  "searchFilterCity": "Ville",
+  "searchFilterCityHint": "Sélectionner une ville",
+  "searchFilterSpecialtyHint": "Sélectionner une spécialité",
+  "doctorResultsAvailable": "Médecins disponibles",
+  "doctorResultsNoFavorites": "Aucun favori trouvé",
+  "doctorResultsAddFavorites": "Ajoutez des favoris pour les voir ici",
+  "doctorResultsTryOther": "Essayez avec d'autres critères",
+  "doctorsNoResults": "Aucun médecin trouvé",
+  "doctorsViewProfile": "Voir le profil",
+  "doctorsBookAppointment": "Prendre rendez-vous",
+
+  "doctorDetailsTitle": "Profil du médecin",
+  "doctorDetailsAbout": "À propos",
+  "doctorDetailsSpecialties": "Spécialités",
+  "doctorDetailsExperience": "Expérience",
+  "doctorDetailsEducation": "Formation",
+  "doctorDetailsWorkingHours": "Heures de travail",
+  "doctorDetailsReviews": "Avis",
+  "doctorDetailsInfo": "Informations",
+  "doctorDetailsCity": "Ville",
+  "doctorDetailsBookNow": "Prendre rendez-vous",
+  "doctorDetailsAddFavorite": "Ajouter aux favoris",
+  "doctorDetailsRemoveFavorite": "Retirer des favoris",
+
+  "bookingSelectDate": "Choisir une date",
+  "bookingSelectTime": "Choisir une heure",
+  "bookingAppointmentType": "Type de rendez-vous",
+  "bookingConsultation": "Consultation",
+  "bookingRegularVisit": "Visite régulière",
+  "bookingFollowUp": "Suivi",
+  "bookingCheckUp": "Bilan de santé",
+  "bookingConfirmDetails": "Confirmer les détails",
+  "bookingSuccess": "Rendez-vous confirmé !",
+  "bookingSuccessMessage": "Votre rendez-vous a été enregistré avec succès.",
+  "bookingAddNotes": "Notes (optionnel)",
+  "bookingConfirmButton": "Confirmer le rendez-vous",
+  "bookingSelectSlot": "Sélectionnez un créneau",
+  "bookingToday": "Aujourd'hui",
+  "bookingNotesHint": "Ajoutez des notes pour le médecin...",
+  "bookingNoSlotsToday": "Aucun créneau disponible aujourd'hui (délai minimum 30min)",
+  "bookingNoSlotsDate": "Aucun créneau disponible pour cette date",
+  "bookingUnavailableTitle": "Réservation indisponible pour vous",
+  "bookingUnavailableMessage": "Votre score de fiabilité est trop bas. Contactez le cabinet pour réserver.",
+  "bookingCallOffice": "Appeler le cabinet",
+  "bookingPhoneUnavailable": "Téléphone non disponible",
+  "bookingSelectTimeError": "Veuillez sélectionner une heure",
+  "bookingUserNotConnectedError": "Erreur: utilisateur non connecté",
+  "bookingSlotUnavailable": "Ce créneau n'est plus disponible",
+  "bookingError": "Erreur: {error}",
+  "@bookingError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "bookingSuccessViewButton": "Voir mes rendez-vous",
+  "bookingLoading": "En cours...",
+  "bookingWarningMessage": "Attention : vous avez {count} absences non justifiées. Après 3 absences, vous ne pourrez plus réserver en ligne.",
+  "@bookingWarningMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bookingReliabilityLabel": "Fiabilité : {pct}% ({label})",
+  "@bookingReliabilityLabel": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      },
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "bookingSelectDateError": "Veuillez sélectionner une date et un horaire",
+  "bookingSuccessWithDoctor": "Votre rendez-vous avec {doctorName} a été enregistré avec succès.",
+  "@bookingSuccessWithDoctor": {
+    "placeholders": {
+      "doctorName": {
+        "type": "String"
+      }
+    }
+  },
+  "bookingBackHome": "Retour à l'accueil",
+  "bookingNoSlotsAvailable": "Aucun créneau disponible",
+  "bookingSelectDateHint": "Sélectionnez une date pour voir les horaires",
+  "attendanceGood": "Bon",
+  "attendanceAverage": "Moyen",
+  "attendanceLow": "Faible",
+
+  "appointmentsMyAppointments": "Mes rendez-vous",
+  "appointmentsUpcoming": "À venir",
+  "appointmentsPast": "Passés",
+  "appointmentsCancelled": "Annulés",
+  "appointmentsNoUpcoming": "Aucun rendez-vous à venir",
+      "appointmentsNoPast": "Aucun rendez-vous passé",
+      "appointmentsNoCancelled": "Aucun rendez-vous annulé",
+  "appointmentsCancel": "Annuler",
+  "appointmentsReschedule": "Reprogrammer",
+  "appointmentsDetails": "Détails",
+  "appointmentsStatusPending": "En attente",
+  "appointmentsStatusConfirmed": "Confirmé",
+  "appointmentsStatusCompleted": "Terminé",
+  "appointmentsStatusCancelled": "Annulé",
+  "appointmentsWithDoctor": "avec Dr. {name}",
+  "@appointmentsWithDoctor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+
+  "cancelAppointmentConfirm": "Êtes-vous sûr de vouloir annuler ce rendez-vous ?",
+  "cancelConfirmYes": "Oui, annuler",
+  "appointmentCancelled": "Rendez-vous annulé",
+  "cancelAppointmentError": "Erreur lors de l'annulation",
+  "clipboardCopied": "Numéro copié",
+
+  "favoritesTitle": "Mes favoris",
+  "favoritesEmpty": "Aucun favori",
+  "favoritesEmptyMessage": "Ajoutez des médecins à vos favoris",
+  "favoritesBrowseDoctors": "Parcourir les médecins",
+
+  "profileTitle": "Mon profil",
+  "profileEditProfile": "Modifier le profil",
+  "profileAccountSettings": "Compte",
+  "profileNotifications": "Notifications",
+  "profileLanguage": "Langue",
+  "profileLogout": "Déconnexion",
+  "profileDeleteAccount": "Supprimer le compte",
+  "profileName": "Nom",
+  "profileEmail": "Email",
+  "profilePhone": "Téléphone",
+  "profileDateOfBirth": "Date de naissance",
+  "profilePersonalInfo": "Informations personnelles",
+  "profileNameHint": "Entrez votre nom",
+  "profileCity": "Ville",
+  "profileCityHint": "Sélectionnez votre ville",
+  "profileUpdateSuccess": "Profil mis à jour",
+  "profileUpdateError": "Erreur lors de la mise à jour",
+
+  "doctorDashboardTitle": "Tableau de bord",
+  "doctorDashboardToday": "Aujourd'hui",
+  "doctorDashboardUpcomingAppointments": "Rendez-vous à venir",
+  "doctorDashboardStats": "Statistiques",
+  "doctorDashboardTodayAppointments": "Rendez-vous du jour",
+  "doctorDashboardPatients": "Patients",
+  "doctorDashboardThisWeek": "Cette semaine",
+  "doctorDashboardEarnings": "Revenus",
+  "doctorDashboardNoAppointments": "Aucun rendez-vous aujourd'hui",
+  "doctorDashboardViewSchedule": "Voir le planning",
+
+  "doctorScheduleTitle": "Planning",
+  "doctorScheduleManageAvailability": "Gérer la disponibilité",
+  "doctorScheduleAddSlot": "Ajouter un créneau",
+  "doctorScheduleEditSlot": "Modifier le créneau",
+  "doctorScheduleDeleteSlot": "Supprimer le créneau",
+  "doctorScheduleWorkingDays": "Jours de travail",
+  "doctorScheduleWorkingHours": "Heures de travail",
+  "doctorScheduleTimeSlots": "Créneaux disponibles",
+
+  "doctorAppointmentsTitle": "Rendez-vous",
+  "doctorAppointmentsPending": "En attente",
+  "doctorAppointmentsConfirmed": "Confirmés",
+  "doctorAppointmentsAll": "Tous",
+  "doctorAppointmentsToday": "Aujourd'hui",
+  "doctorAppointmentsThisWeek": "Cette semaine",
+  "doctorAppointmentsViewPatient": "Voir le patient",
+  "doctorAppointmentsMarkComplete": "Marquer comme terminé",
+  "doctorAppointmentsCancelAppointment": "Annuler le rendez-vous",
+
+  "doctorProfileTitle": "Mon profil",
+  "doctorProfileSpecialties": "Spécialités",
+  "doctorProfileExperience": "Années d'expérience",
+  "doctorProfileEducation": "Formation",
+  "doctorProfileAbout": "À propos",
+  "doctorProfileConsultationFee": "Frais de consultation",
+  "doctorProfileEditProfile": "Modifier le profil",
+
+  "subscriptionTitle": "Abonnement",
+  "subscriptionCurrentPlan": "Plan actuel",
+  "subscriptionUpgrade": "Mettre à niveau",
+  "subscriptionRenew": "Renouveler",
+  "subscriptionCancel": "Annuler l'abonnement",
+  "subscriptionBillingHistory": "Historique de facturation",
+  "subscriptionPaymentMethod": "Méthode de paiement",
+  "subscriptionFree": "Gratuit",
+  "subscriptionBasic": "Basique",
+  "subscriptionPro": "Pro",
+  "subscriptionUnlimitedAppointments": "Rendez-vous illimités",
+  "subscriptionPrioritySupport": "Support prioritaire",
+
+  "errorsGenericError": "Une erreur est survenue",
+  "errorsNetworkError": "Erreur de connexion",
+  "errorsServerError": "Erreur serveur",
+  "errorsUnauthorized": "Non autorisé",
+  "errorsNotFound": "Non trouvé",
+  "errorsTryAgainLater": "Réessayez plus tard",
+
+  "statusPending": "En attente",
+  "statusConfirmed": "Confirmé",
+  "statusCancelled": "Annulé",
+  "statusCompleted": "Terminé",
+
+  "daysMonday": "Lundi",
+  "daysTuesday": "Mardi",
+  "daysWednesday": "Mercredi",
+  "daysThursday": "Jeudi",
+  "daysFriday": "Vendredi",
+  "daysSaturday": "Samedi",
+  "daysSunday": "Dimanche",
+
+  "daysShortMon": "Lun",
+  "daysShortTue": "Mar",
+  "daysShortWed": "Mer",
+  "daysShortThu": "Jeu",
+  "daysShortFri": "Ven",
+  "daysShortSat": "Sam",
+  "daysShortSun": "Dim",
+
+  "settingsTitle": "Paramètres",
+  "settingsAccount": "Compte",
+  "settingsNotifications": "Notifications",
+  "settingsLanguage": "Langue",
+  "settingsPrivacy": "Confidentialité",
+  "settingsAbout": "À propos",
+  "settingsLogoutConfirm": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "settingsVersion": "Version",
+  "settingsPreferences": "Préférences",
+  "settingsNotificationsEnabled": "Activées",
+  "wrongPassword": "Mot de passe incorrect",
+  "confirmPasswordTitle": "Confirmer votre mot de passe",
+  "deleteAccountConfirmMessage": "Cette action est irréversible. Toutes vos données (rendez-vous, favoris) seront définitivement effacées.",
+  "enterPasswordHint": "Entrez votre mot de passe",
+  "logoutConfirmMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+  "installBannerTitle": "Installer Eyadati",
+  "installBannerSubtitle": "Ajoutez Eyadati à votre écran d'accueil",
+  "installBannerButton": "Installer",
+
+  "timeMorning": "Matin",
+  "timeAfternoon": "Après-midi",
+  "timeEvening": "Soir",
+  "bookingBookOnline": "Réserver en ligne"
+}

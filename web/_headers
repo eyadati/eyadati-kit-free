@@ -1,0 +1,36 @@
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+
+/flutter_service_worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+
+/flutter_bootstrap.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/version.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  CDN-Cache-Control: no-store
+
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/manifest.json
+  Cache-Control: no-cache, must-revalidate
+
+# Flutter entrypoint is NOT content-hashed — changes on every build
+/main.dart.js
+  Cache-Control: no-cache, must-revalidate
+
+# App assets are NOT content-hashed — revalidate (SW handles offline)
+/assets/*
+  Cache-Control: no-cache, must-revalidate
+
+# Icons rarely change
+/icons/*
+  Cache-Control: public, max-age=86400
+
+# Canvaskit lives in content-hashed revision directories
+/canvaskit/*
+  Cache-Control: public, max-age=31536000, immutable

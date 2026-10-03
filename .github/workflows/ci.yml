@@ -1,0 +1,63 @@
+name: free CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  dart:
+    name: analyze + test + web build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - name: analyze (fail on errors only)
+        run: |
+          flutter analyze > analyze.log 2>&1 || true
+          tail -n 40 analyze.log
+          if grep -q "error •" analyze.log; then
+            echo "::error::flutter analyze reported errors"
+            grep "error •" analyze.log
+            exit 1
+          fi
+      - run: flutter test
+      - run: flutter build web --release --no-tree-shake-icons
+
+  database:
+    name: schema invariants (supabase db reset)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supabase/setup-supabase@v1
+      - name: start local stack and apply migrations
+        run: |
+          supabase start
+          supabase db reset
+      - name: run free-tier invariants
+        run: |
+          eval "$(supabase status -o env)"
+          DB_URL="${DB_URL:-${POSTGRES_URL:-postgresql://postgres:postgres@127.0.0.1:54322/postgres}}"
+          psql "$DB_URL" -v ON_ERROR_STOP=1 -f supabase/tests/invariants.sql
+      - name: stop stack
+        if: always()
+        run: supabase stop --no-backup
+
+  edge-functions:
+    name: deno type-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: |
+          deno check --allow-import supabase/functions/delete-account/index.ts
+          deno check --allow-import supabase/functions/patient-reset-password/index.ts

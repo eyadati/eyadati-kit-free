@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+import 'package:lucide_flutter/lucide_flutter.dart';
+
+class AppIcons {
+  AppIcons._();
+
+  static const IconData home = LucideIcons.home;
+  static const IconData calendar = LucideIcons.calendar;
+  static const IconData clock = LucideIcons.clock;
+  static const IconData user = LucideIcons.user;
+  static const IconData users = LucideIcons.users;
+  static const IconData settings = LucideIcons.settings;
+  static const IconData search = LucideIcons.search;
+  static const IconData heart = LucideIcons.heart;
+  static const IconData heartFilled = LucideIcons.heart;
+  static const IconData star = LucideIcons.star;
+  static const IconData starFilled = LucideIcons.star;
+  static const IconData phone = LucideIcons.phone;
+  static const IconData mail = LucideIcons.mail;
+  static const IconData mapPin = LucideIcons.mapPin;
+  static const IconData chevronRight = LucideIcons.chevronRight;
+  static const IconData chevronLeft = LucideIcons.chevronLeft;
+  static const IconData chevronDown = LucideIcons.chevronDown;
+  static const IconData arrowRight = LucideIcons.arrowRight;
+  static const IconData arrowLeft = LucideIcons.arrowLeft;
+  static const IconData check = LucideIcons.check;
+  static const IconData checkCircle = LucideIcons.checkCircle;
+  static const IconData x = LucideIcons.x;
+  static const IconData xCircle = LucideIcons.xCircle;
+  static const IconData alertCircle = LucideIcons.alertCircle;
+  static const IconData info = LucideIcons.info;
+  static const IconData plus = LucideIcons.plus;
+  static const IconData minus = LucideIcons.minus;
+  static const IconData edit = LucideIcons.edit;
+  static const IconData trash = LucideIcons.trash;
+  static const IconData filter = LucideIcons.filter;
+  static const IconData sortAsc = LucideIcons.arrowUp;
+  static const IconData sortDesc = LucideIcons.arrowDown;
+  static const IconData logout = LucideIcons.logOut;
+  static const IconData menu = LucideIcons.menu;
+  static const IconData moreVertical = LucideIcons.moreVertical;
+  static const IconData clipboard = LucideIcons.clipboard;
+  static const IconData dollarSign = LucideIcons.dollarSign;
+  static const IconData creditCard = LucideIcons.creditCard;
+  static const IconData bell = LucideIcons.bell;
+  static const IconData medical = LucideIcons.stethoscope;
+  static const IconData stethoscope = LucideIcons.stethoscope;
+  static const IconData activity = LucideIcons.activity;
+  static const IconData award = LucideIcons.award;
+  static const IconData briefcase = LucideIcons.briefcase;
+  static const IconData camera = LucideIcons.camera;
+  static const IconData cameraOff = LucideIcons.cameraOff;
+  static const IconData video = LucideIcons.video;
+  static const IconData videoOff = LucideIcons.videoOff;
+}
