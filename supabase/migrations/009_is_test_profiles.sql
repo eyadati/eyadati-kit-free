@@ -36,7 +36,7 @@ declare
 begin
   select into doctor_record
     manual_pause,
-    is_test,
+    is_test
   from public.doctors
   where id = doctor_uuid;
 

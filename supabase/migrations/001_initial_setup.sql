@@ -336,7 +336,7 @@ declare
   doctor_record record;
 begin
   select into doctor_record
-    manual_pause,
+    manual_pause
   from public.doctors
   where id = doctor_uuid;
 
