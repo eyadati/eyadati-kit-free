@@ -35,7 +35,9 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - uses: supabase/setup-supabase@v1
+      - uses: supabase/setup-cli@v3
+        with:
+          version: latest
       - name: start local stack and apply migrations
         run: |
           supabase start
