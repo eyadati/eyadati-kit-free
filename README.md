@@ -1,17 +1,45 @@
-# Eyadati Kit — Free
+# Eyadati Kit
 
-A complete, open-core **clinic booking starter** built with Flutter (web/mobile) and Supabase.
+### Launch your own doctor appointment SaaS with Flutter + Supabase
 
-Patients discover doctors, book appointments online, and get confirmed. Doctors manage
-their calendar, schedule, and patient history — all backed by your own Supabase project.
+Production-ready **clinic booking source code** — patient app, doctor dashboard,
+scheduling, booking engine and Supabase backend. Built from a real, deployed
+clinic SaaS, not a UI template with mock data.
 
-**License**: [PolyForm Shield 1.0.0](LICENSE) — free to use, modify, and
-self-host for any purpose, including commercial clinic use. You may not resell
-the code or offer Eyadati (or a rebranded version) as a competing booking service.
+[![free CI](https://github.com/eyadati/eyadati-kit-free/actions/workflows/ci.yml/badge.svg)](https://github.com/eyadati/eyadati-kit-free/actions/workflows/ci.yml)
+[![License: PolyForm Shield](https://img.shields.io/badge/license-PolyForm%20Shield-blue.svg)](LICENSE)
+
+**[⭐ Get Premium ($199, instant GitHub delivery)](https://eyadati.com/kits/premium)** ·
+**[License](#license)** ·
+**[What's included](#whats-included)**
+
+<p align="center">
+  <img src="assets/currentUI.png" alt="Doctor appointment calendar — real UI from the Eyadati SaaS" width="850">
+</p>
+
+> **Free → Premium.** The free kit is a complete, working clinic booking starter
+> you can use commercially. Premium adds payments, reminders, reliability
+> tracking, billing and video — and after purchase you're invited to the private
+> repository automatically, within minutes.
 
 ---
 
-## What's included
+## ⭐ This is not another Flutter UI kit
+
+| Generic `$29` clinic templates | Eyadati Kit |
+|---|---|
+| 80 screens, mock data | Real booking logic with conflict-safe RPCs |
+| "Connect your own backend" | Supabase schema, migrations, RLS, Realtime included |
+| No tests | Automated booking-flow + schema tests, CI on every push |
+| Unknown architecture | Hexagonal (ports & adapters), Riverpod, GoRouter, Freezed |
+| Bought once, abandoned | Extracted from a SaaS in production |
+
+You are buying **engineering work**, not screens. The free repo exists so you
+can evaluate exactly that — clone it, read it, run it — before spending a cent.
+
+---
+
+## 📦 What's included
 
 | Area | Details |
 |---|---|
@@ -19,34 +47,60 @@ the code or offer Eyadati (or a rebranded version) as a competing booking servic
 | **Doctor side** | Dashboard, appointment calendar (syncfusion), custom schedule with slots, patient history search, profile & practice setup, settings. |
 | **Patient side** | Doctor search, doctor profile, booking flow (single + multi-slot), appointment list & details, favorites, profile. |
 | **Database** | Supabase PostgreSQL + Realtime. Migrations for `doctors`, `patients`, `profiles`, `appointments`, `schedules`, availability helpers. |
-| **Edge functions** | `available_slots`-style RPC helpers (`book_appointment`, `available_slots_v2`, …), `delete-account`, `patient-reset-password`. |
-| **Backend** | **Your own Supabase project** — set `SUPABASE_URL` / `SUPABASE_ANON_KEY`. No lock-in. |
+| **Edge functions** | Booking RPCs (`book_appointment`, `available_slots_v2`, …), `delete-account`, `patient-reset-password`. |
+| **Backend** | **Your own Supabase project** — set `SUPABASE_URL` / `SUPABASE_ANON_KEY`. No proprietary backend, no lock-in. |
 | **Adapters** | `MockPaymentAdapter`, `MockSmsAdapter`, `MockPushAdapter` behind stable ports (see below). |
 
-### Not included (Premium)
+## ✅ Free vs Premium
 
-Payment/SMS/push integrations (Chargily, Twilio, FCM), appointment reminders,
-patient reliability tracking, visit notes, call logs, multi-doctor clinics
-(alpha), subscriptions/billing, and video consultations.
+|  | Free | Premium |
+|---|:---:|:---:|
+| Patient authentication & booking | ✅ | ✅ |
+| Doctor calendar & scheduling | ✅ | ✅ |
+| Availability engine (conflict-safe booking RPCs) | ✅ | ✅ |
+| Supabase backend (migrations, RLS, Realtime) | ✅ | ✅ |
+| Multi-slot booking, favorites, patient history | ✅ | ✅ |
+| Mock payment / SMS / push adapters | ✅ | ✅ |
+| Automated tests + CI | ✅ | ✅ |
+| Real payment integration (Chargily checkout, webhooks) | — | ✅ |
+| SMS + push reminders (cron-driven) | — | ✅ |
+| No-show tracking & patient reliability score | — | ✅ |
+| Visit notes & call logs | — | ✅ |
+| SaaS billing / subscriptions for your doctors | — | ✅ |
+| Video consultations | — | ✅ |
+| Real Chargily / Twilio / FCM adapters | — | ✅ |
+| Multi-doctor clinics | — | Roadmap |
 
-See [Upgrade to Premium](#upgrade-to-premium).
+> **Free gets you a booking application. Premium gets you the infrastructure
+> for a clinic SaaS business.**
 
 ---
 
-## Getting started
+## 📋 Requirements
 
-### 1. Prerequisites
+```text
+Flutter 3.11+ / Dart 3.11+
+A Supabase project (free tier works)
+Git
 
-- Flutter SDK `^3.11.5` (`flutter --version`)
-- A [Supabase](https://supabase.com) project (free tier works)
+Optional: Supabase CLI (migrations), Docker (local stack)
+```
 
-### 2. Install
+No proprietary backend required — everything runs on **your** Supabase project.
+
+---
+
+## 🚀 Getting started
+
+### 1. Install
 
 ```bash
+git clone https://github.com/eyadati/eyadati-kit-free.git
+cd eyadati-kit-free
 flutter pub get
 ```
 
-### 3. Configure the backend
+### 2. Configure the backend
 
 ```bash
 cp .env.example .env
@@ -61,7 +115,7 @@ flutter run -d chrome \
   --dart-define=SUPABASE_ANON_KEY=your-anon-key
 ```
 
-### 4. Database
+### 3. Database
 
 Apply the migrations in `supabase/migrations/` to your project, in filename order:
 
@@ -69,7 +123,7 @@ Apply the migrations in `supabase/migrations/` to your project, in filename orde
 supabase db push          # or copy them into the SQL editor
 ```
 
-### 5. Run
+### 4. Run
 
 ```bash
 flutter run -d chrome      # web
@@ -79,24 +133,21 @@ flutter build web --release
 
 ---
 
-## Internationalization
+## 🗺️ Where do I change X?
 
-The upstream product is Algeria-only; **this kit is not**. Locale-neutral
-defaults ship everywhere and are configurable:
-
-- **Phone numbers** — validation accepts international `E.164` (`+15551234567`)
-  in addition to Algerian numbers.
-- **City list** — `lib/core/constants/app_regions.dart`: replace the default
-  list with your region's cities, or switch the field to free text.
-- **Languages** — `flutter gen-l10n` (`l10n.yaml`): French (template) + Arabic.
-  To add English: create `lib/l10n/app_en.arb` from `app_fr.arb`, run
-  `flutter gen-l10n`, add `Locale('en')` to `supportedLocales` in `lib/main.dart`.
-- **Payment / SMS / push** — stable ports with mock adapters; swap in any
-  provider for your region (see [Swapping an adapter](#swapping-an-adapter)).
+| I want to change… | Go here |
+|---|---|
+| Branding, app name, colors | `REBRAND.md`, `lib/l10n/`, `lib/core/theme/` |
+| Patient UI | `lib/features/patient/` |
+| Doctor UI | `lib/features/doctor/` |
+| Booking / availability logic | `lib/repositories/`, `supabase/migrations/` (RPCs) |
+| Payment / SMS / push provider | `lib/core/ports/` + `lib/core/infrastructure/` |
+| Database schema | `supabase/migrations/` |
+| Routes | `lib/core/routing/` |
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 Hexagonal (ports & adapters) with feature-first folders:
 
@@ -124,10 +175,23 @@ lib/
 State management is **Riverpod** (annotation + codegen), routing is **GoRouter**,
 models are **freezed**.
 
+### Why ports & adapters matters to you
+
+Every external capability sits behind an interface, so you can replace the
+provider without touching booking or business logic:
+
+```
+Booking ──▶ PaymentPort ──▶ ChargilyAdapter   (Premium)
+                          ├ StripeAdapter      (yours to add)
+                          └ YourAdapter
+
+        ──▶ SmsPort ─────▶ TwilioAdapter       (Premium) / MockSmsAdapter (Free)
+        ──▶ PushPort ────▶ FcmPushAdapter      (Premium) / MockPushAdapter (Free)
+```
+
 ### Swapping an adapter
 
-Every external capability is a port. To change the implementation, replace the
-registration — nothing else in the app changes:
+Replace the registration — nothing else in the app changes:
 
 ```dart
 // lib/core/ports/payment_port.dart
@@ -146,43 +210,90 @@ URL), `MockSmsAdapter` (logs the message), and `MockPushAdapter` (no-op).
 
 ---
 
-## Project conventions
+## 🧪 Built for real applications
 
-- `flutter analyze` must be clean before committing (`analysis_options.yaml`).
-- Generated files (`*.g.dart`, `*.freezed.dart`) are produced with:
-  ```bash
-  dart run build_runner build --delete-conflicting-outputs
-  ```
-- Localization: `flutter gen-l10n` (see `l10n.yaml`), French (template) + Arabic.
+This code comes from a working clinic SaaS, and it is guarded like one:
+
+- **Automated Flutter tests** — unit, repository query-shape, and booking-flow
+  integration tests (all against in-memory fakes)
+- **SQL schema invariants** run against a real Supabase stack
+- **Edge Function type checking** in CI
+- **CI on every push** — analyze, test, production web build
+- **RLS-enabled** database schema
+
+Full breakdown: [TESTING.md](TESTING.md).
 
 ---
 
-## Upgrade to Premium
+## 🌍 Internationalization
 
-Premium is the same codebase plus:
+The upstream product is Algeria-only; **this kit is not**. Locale-neutral
+defaults ship everywhere and are configurable:
 
-- **Payments**: Chargily checkout via `PaymentPort` (bring your own adapter for other PSPs), real webhooks and subscription state
-- **Reminders**: SMS + push reminders to patients before appointments
-- **Reliability**: no-show tracking, patient attendance rate, booking guards
-- **Visit notes & call logs**: per-patient clinical notes, call logging with monthly call count
-- **Clinics** *(alpha)*: multi-doctor groups, shared calendar, walk-in appointments (code included, UI entry point not yet enabled)
-- **Billing**: plan management for your own end-user doctors
+- **Phone numbers** — validation accepts international `E.164` (`+15551234567`)
+  in addition to Algerian numbers.
+- **City list** — `lib/core/constants/app_regions.dart`: replace the default
+  list with your region's cities, or switch the field to free text.
+- **Languages** — `flutter gen-l10n` (`l10n.yaml`): French (template) + Arabic.
+  To add English: create `lib/l10n/app_en.arb` from `app_fr.arb`, run
+  `flutter gen-l10n`, add `Locale('en')` to `supportedLocales` in `lib/main.dart`.
+- **Payment / SMS / push** — stable ports with mock adapters; swap in any
+  provider for your region (see [Swapping an adapter](#swapping-an-adapter)).
+
+---
+
+## 🎨 White-label ready
+
+Buyers don't launch "Eyadati" — they launch **their own brand**. The kit ships
+with the upstream name, and [REBRAND.md](REBRAND.md) lists every file to change:
+app title, localized strings, colors, metadata. Edit the `.arb` sources and run
+`flutter gen-l10n` rather than the generated localization files.
+
+Agencies: use it as the foundation for client projects (see [License](#license)).
+
+---
+
+## 🔓 License
+
+**PolyForm Shield 1.0.0** — free for individuals and commercial use, with a
+no-compete restriction. In plain English:
+
+| Question | Answer |
+|---|---|
+| Use it for my own app / clinic, commercially? | **✅ Yes** |
+| Modify the source? | **✅ Yes** |
+| Self-host? | **✅ Yes** |
+| Resell or redistribute the kit code itself? | **No** |
+| Offer Eyadati (or a rebranded Eyadati) as a competing booking service? | **No** |
+
+> Not legal advice — read the full [LICENSE](LICENSE).
+
+---
+
+## ⭐ Upgrade to Premium
+
+Premium is the same codebase plus the production modules:
+
+- **Payments** — Chargily checkout via `PaymentPort`, real webhooks and subscription state
+- **Reminders** — SMS + push reminders to patients before appointments
+- **Reliability** — no-show tracking, patient attendance rate, booking guards
+- **Visit notes & call logs** — per-patient clinical notes, call logging with monthly call count
+- **Billing** — plan management for your own end-user doctors
 - **Video consultations**
+- **Real adapters** — Chargily, Twilio, FCM behind the same ports
 
-Premium is licensed commercially (proprietary EULA) and is delivered from a
-private repository. Contact: **eyadati.dz@gmail.com**
+**What you receive after purchase:**
+
+1. Complete Paddle checkout (one-time, $199).
+2. Your GitHub username (entered at checkout) is verified automatically.
+3. The private Premium repository invite arrives at your GitHub account within minutes.
+4. Clone, follow the setup guide, start building.
+
+**[Buy Premium →](https://eyadati.com/kits/premium)** — commercial EULA,
+delivered from a private repository. Questions: **eyadati.dz@gmail.com**
 
 ---
 
-## Rebranding
-
-This kit ships with the upstream "Eyadati" name (app title, localized
-strings, legal pages). [REBRAND.md](REBRAND.md) lists every file to change —
-edit the `.arb` sources and run `flutter gen-l10n` rather than the generated
-localization files.
-
----
-
-## Support
+## 💬 Support
 
 Open an issue in this repository.
